@@ -23,21 +23,21 @@ function randomExpression() {
   console.log(`Question: ${random1} ${char} ${random2}`);
   q1 = readlineSync.question('Your answer: ');
 
-    switch (char) {
-      case '+':
-        result = random1 + random2;
-        break;
-      case '-':
-        result = random1 - random2;
-        break;
-      case '*':
-        result = random1 * random2;
-        break;
-      default:
-        result = null;
-    }
-  
-    console.log(result)
+  switch (char) {
+    case '+':
+      result = random1 + random2;
+      break;
+    case '-':
+      result = random1 - random2;
+      break;
+    case '*':
+      result = random1 * random2;
+      break;
+    default:
+      result = null;
+  }
+
+  console.log(result)
 }
 
 let count = 0;
@@ -48,8 +48,8 @@ function output() {
       console.log('Correct!')
       count++
       randomExpression()
+    }
   }
-}
 
   if (count === 2) {
     console.log(`Congratulations, ${userName}!`)
