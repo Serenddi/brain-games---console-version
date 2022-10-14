@@ -22,16 +22,15 @@ function randomExpression() {
   console.log(`Question: ${random1} ${random2}`);
   q1 = readlineSync.question('Your answer: ');
 
-  
-while (random1!=random2) {
-  if (random1>random2) {
-    random1 = random1 - random2;
+
+  while (random1 != random2) {
+    if (random1 > random2) {
+      random1 = random1 - random2;
+    } else {
+      random2 = random2 - random1;
+    }
   }
-  else {
-    random2 = random2 - random1;
-  }
-}
-gcd = random1;
+  gcd = random1;
 }
 
 let count = 0;
