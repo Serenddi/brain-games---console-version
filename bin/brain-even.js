@@ -24,28 +24,28 @@ function output() {
   for (let i = 0; i < 2; i += 1) {
     if (random % 2 === 0 && q1 === 'yes') {
       console.log('Correct!');
-      count = count + 1;
+      count += 1;
       randomNum();
     } else if (random % 2 !== 0 && q1 === 'no') {
       console.log('Correct!');
-      count = count + 1; 
+      count += 1;
       randomNum();
     }
   }
 
   if (count === 2) {
-    console.log(`Congratulations, ${userName}!`)
-  };
+    console.log(`Congratulations, ${userName}!`);
+  }
 
   if (random % 2 === 0 && q1 === 'no') {
     console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
   } else if (random % 2 !== 0 && q1 === 'yes') {
     console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
-  };
+  }
 
   if (q1 !== 'yes' && q1 !== 'no') {
-    console.log('Wrong!')
-  };
+    console.log('Wrong!');
+  }
 }
 
 function even() {
@@ -55,4 +55,4 @@ function even() {
   output();
 }
 
-even()
+even();

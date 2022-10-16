@@ -10,13 +10,13 @@ function isPrime() {
   if (random === 1) {
     return false;
   }
-    for (let i = 2; i < random; i += 1) {
-      if (random % i === 0) {
-        return false;
-      } 
+  for (let i = 2; i < random; i += 1) {
+    if (random % i === 0) {
+      return false;
     }
-    return true;
   }
+  return true;
+}
 
 function rules() {
   userName = readlineSync.question('May I have your name? ');
@@ -34,38 +34,38 @@ function randomNum() {
 let count = 0;
 
 function output() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i += 1) {
     if (isPrime() === true && q1 === 'yes') {
       console.log('Correct!');
-      count = count + 1;
+      count += 1;
       randomNum();
     } else if (isPrime() === false && q1 === 'no') {
       console.log('Correct!');
-      count = count + 1;
+      count += 1;
       randomNum();
     }
   }
 
   if (count === 2) {
-    console.log(`Congratulations, ${userName}!`)
+    console.log(`Congratulations, ${userName}!`);
   }
 
   if (isPrime() === true && q1 === 'no') {
-    console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`)
+    console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
   } else if (isPrime() === false && q1 === 'yes') {
-    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`)
+    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
   }
 
   if (q1 !== 'yes' && q1 !== 'no') {
-    console.log('Wrong!')
+    console.log('Wrong!');
   }
 }
 
-  function calc() {
-    console.log('Welcome to the Brain Games!');
-    rules();
-    randomNum();
-    output();
-  }
+function calc() {
+  console.log('Welcome to the Brain Games!');
+  rules();
+  randomNum();
+  output();
+}
 
-  calc()
+calc();

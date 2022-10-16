@@ -43,28 +43,28 @@ function randomExpression() {
 let count = 0;
 
 function output() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i += 1) {
     if (result === Number(q1)) {
       console.log('Correct!');
-      count = count + 1;
+      count += 1;
       randomExpression();
     }
-  };
+  }
 
   if (count === 2) {
     console.log(`Congratulations, ${userName}!`);
-  };
+  }
 
   if (result !== Number(q1)) {
     console.log(`${q1} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${userName}!`);
-  };
-};
+  }
+}
 
 function calc() {
   console.log('Welcome to the Brain Games!');
   rules();
-  randomExpression()
-  output()
-};
+  randomExpression();
+  output();
+}
 
-calc()
+calc();

@@ -22,9 +22,9 @@ function randomExpression() {
 
   while (random1 !== random2) {
     if (random1 > random2) {
-      random1 = random1 - random2;
+      random1 -= random2;
     } else {
-      random2 = random2 - random1;
+      random2 -= random1;
     }
   }
   gcd = random1;
@@ -33,12 +33,12 @@ function randomExpression() {
 let count = 0;
 
 function output() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i += 1) {
     if (gcd === Number(q1)) {
       console.log('Correct!');
-      count = count + 1;
+      count += 1;
       randomExpression();
-    };
+    }
   }
 
   if (count === 2) {
@@ -57,4 +57,4 @@ function calc() {
   output();
 }
 
-calc()
+calc();

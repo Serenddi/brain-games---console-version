@@ -21,7 +21,7 @@ function randomExpression() {
   const hiddenIndex = Math.floor(Math.random() * (5 - 1 + 1) + 1);
 
   for (let i = 0; i < 6; i += 1) {
-    arr.push(random1 = random1 + plusNum);
+    arr.push(random1 += plusNum);
   }
 
   hiddenNumber = arr[hiddenIndex];
@@ -39,7 +39,7 @@ function output() {
   for (let i = 0; i < 2; i += 1) {
     if (hiddenNumber === Number(q1)) {
       console.log('Correct!');
-      count = count + 1;
+      count += 1;
       randomExpression();
     }
   }
@@ -60,4 +60,4 @@ function calc() {
   output();
 }
 
-calc()
+calc();
