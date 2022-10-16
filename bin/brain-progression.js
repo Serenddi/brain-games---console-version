@@ -28,7 +28,7 @@ function randomExpression() {
 
   arr[hiddenIndex] = '..'
 
-  let out = arr.join(', ');
+  let out = arr.join(' ');
 
   console.log(`Question: ${out}`)
 
