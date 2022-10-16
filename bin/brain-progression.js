@@ -26,7 +26,7 @@ function randomExpression() {
 
   hiddenNumber = arr[hiddenIndex];
 
-  arr[hiddenIndex] = '...'
+  arr[hiddenIndex] = '..'
 
   console.log(arr.join(', '))
 
