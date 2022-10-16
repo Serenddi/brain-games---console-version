@@ -8,12 +8,10 @@ let random2;
 let q1;
 let gcd;
 
-
-
 function rules() {
   userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log('Find the greatest common divisor of given numbers.')
+  console.log('Find the greatest common divisor of given numbers.');
 }
 
 function randomExpression() {
@@ -22,8 +20,7 @@ function randomExpression() {
   console.log(`Question: ${random1} ${random2}`);
   q1 = readlineSync.question('Your answer: ');
 
-
-  while (random1 != random2) {
+  while (random1 !== random2) {
     if (random1 > random2) {
       random1 = random1 - random2;
     } else {
@@ -38,28 +35,26 @@ let count = 0;
 function output() {
   for (let i = 0; i < 2; i++) {
     if (gcd === Number(q1)) {
-      console.log('Correct!')
-      count++
-      randomExpression()
-    }
+      console.log('Correct!');
+      count = count + 1;
+      randomExpression();
+    };
   }
 
   if (count === 2) {
-    console.log(`Congratulations, ${userName}!`)
+    console.log(`Congratulations, ${userName}!`);
   }
-
 
   if (gcd !== Number(q1)) {
-    console.log(`${q1} is wrong answer ;(. Correct answer was ${gcd}.\nLet's try again, ${userName}!`)
+    console.log(`${q1} is wrong answer ;(. Correct answer was ${gcd}.\nLet's try again, ${userName}!`);
   }
-
 }
 
 function calc() {
   console.log('Welcome to the Brain Games!');
   rules();
-  randomExpression()
-  output()
+  randomExpression();
+  output();
 }
 
 calc()

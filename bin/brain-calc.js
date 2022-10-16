@@ -7,13 +7,13 @@ let random2;
 let q1;
 let userName;
 let result = 0;
-let chars = ['+', '-', '*'];
+const chars = ['+', '-', '*'];
 let char;
 
 function rules() {
   userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log('What is the result of the expression?')
+  console.log('What is the result of the expression?');
 }
 
 function randomExpression() {
@@ -37,7 +37,7 @@ function randomExpression() {
       result = null;
   }
 
-  console.log(result)
+  console.log(result);
 }
 
 let count = 0;
@@ -45,29 +45,26 @@ let count = 0;
 function output() {
   for (let i = 0; i < 2; i++) {
     if (result === Number(q1)) {
-      console.log('Correct!')
-      count++
-      randomExpression()
+      console.log('Correct!');
+      count = count + 1;
+      randomExpression();
     }
-  }
+  };
 
   if (count === 2) {
-    console.log(`Congratulations, ${userName}!`)
-  }
-
+    console.log(`Congratulations, ${userName}!`);
+  };
 
   if (result !== Number(q1)) {
-    console.log(`${q1} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${userName}!`)
-  }
-
-}
-
+    console.log(`${q1} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${userName}!`);
+  };
+};
 
 function calc() {
   console.log('Welcome to the Brain Games!');
   rules();
   randomExpression()
   output()
-}
+};
 
 calc()

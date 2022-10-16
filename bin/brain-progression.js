@@ -10,49 +10,47 @@ let hiddenNumber;
 function rules() {
   userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log('What number is missing in the progression?')
+  console.log('What number is missing in the progression?');
 }
 
 function randomExpression() {
-  let arr = [];
+  const arr = [];
 
-  let plusNum = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+  const plusNum = Math.floor(Math.random() * (5 - 1 + 1) + 1);
   let random1 = Math.floor(Math.random() * (40 - 1 + 1) + 1);
-  let hiddenIndex = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+  const hiddenIndex = Math.floor(Math.random() * (5 - 1 + 1) + 1);
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i += 1) {
     arr.push(random1 = random1 + plusNum);
   }
 
   hiddenNumber = arr[hiddenIndex];
 
-  arr[hiddenIndex] = '..'
+  arr[hiddenIndex] = '..';
 
-  let out = arr.join(' ');
+  const out = arr.join(' ');
 
-  console.log(`Question: ${out}`)
+  console.log(`Question: ${out}`);
 
   q1 = readlineSync.question('Your answer: ');
 }
 
 function output() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i += 1) {
     if (hiddenNumber === Number(q1)) {
-      console.log('Correct!')
-      count++
-      randomExpression()
+      console.log('Correct!');
+      count = count + 1;
+      randomExpression();
     }
   }
 
   if (count === 2) {
-    console.log(`Congratulations, ${userName}!`)
+    console.log(`Congratulations, ${userName}!`);
   }
-
 
   if (hiddenNumber !== Number(q1)) {
-    console.log(`${q1} is wrong answer ;(. Correct answer was ${hiddenNumber}.\nLet's try again, ${userName}!`)
+    console.log(`${q1} is wrong answer ;(. Correct answer was ${hiddenNumber}.\nLet's try again, ${userName}!`);
   }
-
 }
 
 function calc() {
