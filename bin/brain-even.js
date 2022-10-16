@@ -8,7 +8,7 @@ let userName;
 
 function rules() {
   userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`);
+  console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 }
 

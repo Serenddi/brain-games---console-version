@@ -9,7 +9,7 @@ let random;
 
 function rules() {
   userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`);
+  console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
 }
 

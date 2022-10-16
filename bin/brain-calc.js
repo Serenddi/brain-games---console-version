@@ -12,7 +12,7 @@ let char;
 
 function rules() {
   userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`);
+  console.log(`Hello, ${userName}!`);
   console.log('What is the result of the expression?')
 }
 

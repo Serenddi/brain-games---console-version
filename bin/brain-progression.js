@@ -9,7 +9,7 @@ let hiddenNumber;
 
 function rules() {
   userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`);
+  console.log(`Hello, ${userName}!`);
   console.log('What number is missing in the progression?')
 }
 
