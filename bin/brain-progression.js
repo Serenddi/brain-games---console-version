@@ -28,7 +28,9 @@ function randomExpression() {
 
   arr[hiddenIndex] = '..'
 
-  console.log(arr.join(', '))
+  let out = arr.join(', ');
+
+  console.log(`Question: ${out}`)
 
   q1 = readlineSync.question('Your answer: ');
 }
